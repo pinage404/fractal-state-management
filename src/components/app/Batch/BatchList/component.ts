@@ -1,13 +1,13 @@
-import { Batch, createBatch } from '../Batch';
-import { BatchListItem, BatchWithMeasure } from './BatchListItem';
+import { Component } from '../../../../interfaces';
 import {
   makeListComponent,
-  State as ListState,
+  Sinks as ListSinks,
   Sources as ListSources,
-  Sinks as ListSinks
+  State as ListState
 } from '../../../shared/List';
-import { Component } from '../../../../interfaces';
-import { Measure } from '../../product';
+import { Measure } from '../../Product';
+import { createBatch } from '../Batch';
+import { BatchListItem, BatchWithMeasure } from './BatchListItem';
 
 export type State = ListState<BatchWithMeasure>;
 export type Sources = ListSources<BatchWithMeasure>;

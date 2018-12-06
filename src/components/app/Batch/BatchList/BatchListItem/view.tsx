@@ -1,8 +1,8 @@
-import { Stream } from 'xstream';
 import { VNode } from '@cycle/dom';
-import { BatchWithMeasure } from './component';
+import { Stream } from 'xstream';
 import { getUnitCorrespondingToMeasure, Measure } from '../../../Product';
-import { computeDaysUntilExpiry, batchExpiresSoonOrHasExpired } from '../../Batch';
+import { batchExpiresSoonOrHasExpired, computeDaysUntilExpiry } from '../../Batch';
+import { BatchWithMeasure } from './component';
 
 export function view(batch$: Stream<BatchWithMeasure>): Stream<VNode> {
   return batch$.map(({ id, quantity, measure, expiryDate }) => {

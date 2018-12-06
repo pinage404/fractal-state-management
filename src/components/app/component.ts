@@ -1,18 +1,18 @@
-import { Stream } from 'xstream';
-import { extractSinks } from 'cyclejs-utils';
 import isolate from '@cycle/isolate';
+import { extractSinks } from 'cyclejs-utils';
+import { Stream } from 'xstream';
 import { driverNames } from '../../drivers';
-import { Sources, Sinks, Reducer } from '../../interfaces';
-import { Product, ProductList, ProductDetail } from './product';
-import {
-  makeChildSources,
-  makeProductListChildState,
-  makeProductDetailChildState,
-  ChildState,
-  reducer,
-  makeBatchDetailChildState
-} from './state';
+import { Reducer, Sinks, Sources } from '../../interfaces';
 import { Batch, BatchDetail } from './Batch';
+import { Product, ProductDetail, ProductList } from './Product';
+import {
+  ChildState,
+  makeBatchDetailChildState,
+  makeChildSources,
+  makeProductDetailChildState,
+  makeProductListChildState,
+  reducer
+} from './state';
 
 export type State = {
   products: Product[];

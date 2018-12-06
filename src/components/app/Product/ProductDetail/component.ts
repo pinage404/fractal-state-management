@@ -1,15 +1,15 @@
+import { VNode } from '@cycle/dom';
+import { Reducer, StateSource } from '@cycle/state';
+import { HistoryAction } from 'cyclic-router';
 import xs, { Stream } from 'xstream';
-import { Sources as BaseSources, Sinks as BaseSinks, Component } from '../../../../interfaces';
-import { Batch } from '../../batch';
-import { makeBatchListComponent, Sources as BatchListSources, Sinks as BatchListSinks } from '../../batch/BatchList';
+import { Component, Sinks as BaseSinks, Sources as BaseSources } from '../../../../interfaces';
+import { Batch } from '../../Batch';
+import { makeBatchListComponent, Sinks as BatchListSinks, Sources as BatchListSources } from '../../Batch/BatchList';
+import { BatchWithMeasure } from '../../Batch/BatchList/BatchListItem';
 import { Product } from '../Product';
 import { intent } from './intent';
-import { reducer, makeBatchListChildState } from './state';
+import { makeBatchListChildState, reducer } from './state';
 import { view } from './view';
-import { StateSource, Reducer } from '@cycle/state';
-import { VNode } from '@cycle/dom';
-import { HistoryAction } from 'cyclic-router';
-import { BatchWithMeasure } from '../../Batch/BatchList/BatchListItem';
 
 export type State = {
   product: Product;
