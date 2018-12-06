@@ -11,7 +11,7 @@
     "strict": true,
     "strictFunctionTypes": false,
     "allowJs": true,
-    "lib": ["ES6", "ES5", "DOM"]
+    "lib": ["es2015", "es5", "dom"]
   },
   "exclude": ["node_modules", "build"]
 }
